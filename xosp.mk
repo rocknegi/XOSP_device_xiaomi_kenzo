@@ -17,17 +17,19 @@
 
 $(call inherit-product, device/xiaomi/kenzo/full_kenzo.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common xosp stuff.
+$(call inherit-product, vendor/xosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/xosp/config/xosp.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := kenzo
-PRODUCT_NAME := lineage_kenzo
+PRODUCT_NAME := xosp_kenzo
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 3
 TARGET_VENDOR := Xiaomi
+IS_ARM64 := TRUE
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
